@@ -12,6 +12,7 @@ router.post("/create-checkout-session", async (req, res) => {
                 message:"price id is required",
             }
         });
+        return;
     }
     try {
         const session = await stripe.checkout.sessions.create({
